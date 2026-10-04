@@ -51,7 +51,9 @@ The same value in a Little Endian system would look as follows. The least signif
 | 1002    | 34   |
 | 1003    | 12   |
 
-After seeing these two representations, another question came to my mind. To be honest I have been talking about endianness simply as a matter of ordering bytes in a specific order. But is endianness that simple? If Endianness is about the order in which bytes are arranged in memory, does it matter only inside the computer's memory? What happens when these bytes are saved into a file or sent to another computer? I searched about this and understood the importance of endianness as follows. Let's imagine that a Little Endian computer stores the value <mark>0x12345678</mark> and sends its four bytes to another computer. The bytes would be sent as: 
+### Is endianness only about memory?
+
+After seeing these two representations, a question came to my mind. To be honest I have been talking about endianness simply as a matter of ordering bytes in a specific order. But is endianness that simple? If Endianness is about the order in which bytes are arranged in memory, does it matter only inside the computer's memory? What happens when these bytes are saved into a file or sent to another computer? I searched about this and understood the importance of endianness as follows. Let's imagine that a Little Endian computer stores the value <mark>0x12345678</mark> and sends its four bytes to another computer. The bytes would be sent as: 
 
 <mark>78 56 34 12</mark>
 
@@ -75,7 +77,12 @@ Cohen also answers another question I had, which is, "Can we not agree on one sy
 
 The reading itself gives a more rigorous historical viewpoint on the emergence of both approaches. Cohen explains that early communication systems, such as RS 232, Telex, HDLC, SDLC, and several communication chips, were built around sending the least significant bit first. At the same time, mainframe and computer designers had reasons to favor different forms of word alignment. This suggests that the emergence of two approaches was not simply a matter of people choosing whichever order they personally liked. Different technical systems had already developed around different conventions.
 
+### Is one actually better than the other? 
+I always have more questions than answers, and the gap is growing. This topic does not escape this sentence either. Another question came to my mind. If both Big Endian and Little Endian can represent the same value correctly, and both have been successfully used in real computer systems, is there actually a technically superior choice between them? In other words, is one byte order inherently better, or does the choice mainly depend on the system and the context in which it is used? 
+Before searching for an answer, my initial assumption is that there is probably no universally superior choice. Since both Big Endian and Little Endian emerged from different technical environments and have been successfully used, I suspect that the better choice depends on the system and the context.
+
 ### My Critical View
+At the beginning, I defined Endianness simply as the order in which bytes are arranged in memory. I would define Endianness as the convention used to determine the order in which the bytes of a multi byte value are arranged in memory or represented when the byte sequence is stored or exchanged.
 
 After investigating the concept, I think the existence of both Big Endian and Little Endian can be understood from two different perspectives. The first one is the difference between human conventions for representing numbers and the way numerical significance can be related to memory addresses. The second one is more practical. Different areas of computing developed their own conventions because those conventions were useful or convenient for the systems they were building.
 
