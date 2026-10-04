@@ -51,9 +51,8 @@ The same value in a Little Endian system would look as follows. The least signif
 | 1002    | 34   |
 | 1003    | 12   |
 
-### A Small Thought Experiment
 
-At this point, I wanted to see what would actually happen if two systems used different byte orders. Let's imagine that a Little Endian computer stores the value <mark>0x12345678</mark> and sends its four bytes to another computer. The bytes would be sent as:
+I wanted to see what would actually happen if two systems used different byte orders. Let's imagine that a Little Endian computer stores the value <mark>0x12345678</mark> and sends its four bytes to another computer. The bytes would be sent as:
 
 <mark>78 56 34 12</mark>
 
