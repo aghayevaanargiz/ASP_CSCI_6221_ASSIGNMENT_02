@@ -4,10 +4,10 @@
 
 ## Endianness
 
-Endianness is basically the specific order in which the bytes are arranged in memory. There are two kinds of endianness: Big Endianness and Little Endianness. Before diving into the technical side of the concept, we can give an intuitive example to make it easy to understand. Different human languages are written and read in different orders. For example, Azerbaijani is written and read from left to right, while Arabic is written and read from right to left [GeeksforGeeks, Endianness](https://www.geeksforgeeks.org/dsa/little-and-big-endian-mystery/). The most meaningful part of the sentence, the subject, is put on either the leftmost or the rightmost side of the sentence depending on the nature and grammar of the language. Endianness is just like the same.
+Endianness is basically the specific order in which the bytes are arranged in memory. There are two kinds of endianness: Big Endianness and Little Endianness. Before diving into the technical side of the concept, we can give an intuitive example to make it easy to understand. 
 
 ## Big Endian and Little Endian
-Big Endian is basically the subject of the sentence being put on the leftmost side of the sentence. Technically speaking, the most significant byte is placed at the lowest memory address. Little Endian is the opposite of Big Endian. In this byte positioning case, the least significant byte is placed at the lowest memory address. 
+Big Endian is ,technically speaking, the most significant byte is placed at the lowest memory address. Little Endian is the opposite of Big Endian. In this byte positioning case, the least significant byte is placed at the lowest memory address. 
 
 
 
