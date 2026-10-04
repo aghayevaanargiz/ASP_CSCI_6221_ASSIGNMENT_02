@@ -34,9 +34,14 @@ My personal question came to the stage after investigating these fundamentals. I
 
 Cohen explains that the two systems emerged because designers tried to resolve a conflict between how we write human languages and how we represent numbers mathematically. Big Endian defenders chose left-to-right alignment because it matches how English text is written. Little Endian defenders chose low-address alignment because it matches mathematical logic, where higher memory addresses correspond to higher values. 
 
-> **Cohen:** English, like most modern languages, suggests that we arrange computer words from left to right... The convention introduced by our numbering system places the wide end on the left and the narrow end on the right.
+> **Cohen:** *English, like most modern languages, suggests that we arrange computer words from left to right... The convention introduced by our numbering system places the wide end on the left and the narrow end on the right.*
 
-> **Cohen:**: They believe in starting with the narrow end of every word and that low addresses are of lower order than high addresses... This order is consistent with itself, with the Hebrew language, and (more importantly) with mathematics, because significance increases with increasing item numbers (address).
+> **Cohen:**: *They believe in starting with the narrow end of every word and that low addresses are of lower order than high addresses... This order is consistent with itself, with the Hebrew language, and (more importantly) with mathematics, because significance increases with increasing item numbers (address).*
+
+Cohen also answers my another question which is "Can we not agree on one system and use that?". He says: *Both camps have adopted the slogan 'We'd rather fight than switch!' I believe they mean it*. Here as I can drive from the concept he means that we cannot use one system because different industries follow different standards, and no industry wants to give up its existing system. 
+
+
+
 
 
 
