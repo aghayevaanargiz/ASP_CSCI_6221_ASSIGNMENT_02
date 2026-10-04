@@ -74,18 +74,4 @@ Therefore, I would not say that one side was simply correct and the other side w
 This also changed my initial view of the problem. At first, I thought that if both systems represent exactly the same value, there should be no reason to have two different systems. After investigating the historical and technical reasons, I think the real problem is not that one representation is better than the other. The bigger problem is **agreement**. As long as different systems use different conventions, they need to know which convention is being used when exchanging or interpreting multi byte data.
 
 
-## 3. How Is a Multi Byte Value Represented in Memory?
-
-## 4. Big Endian vs Little Endian
-
-## 5. What Endianness Does and Does Not Change
-
-## 6. Why Does Endianness Matter?
-
-## 7. Is "Big Endian vs Little Endian" Always That Simple?
-
-## 8. Critical Analysis
-
-## 9. Conclusion
-
 ## References
