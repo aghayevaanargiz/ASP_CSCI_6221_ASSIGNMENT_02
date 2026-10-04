@@ -53,7 +53,7 @@ The same value in a Little Endian system would look as follows. The least signif
 
 At this point, an interesting question came to my mind. **If both systems do not change the value itself, then why do we have two of them? Can we not agree on one system only and use that? For example, Big Endian**.
 
-I am back :D. I was searching for a reading that answers this question and found a very interesting one, [On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf), written by Danny Cohen. He explains the situation in a way that I found particularly interesting.
+I was searching for a reading that answers this question and found a very interesting one, [On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf), written by Danny Cohen. He explains the situation in a way that I found particularly interesting.
 
 Cohen explains that the two approaches emerged partly because there were different ways of thinking about how numbers should be arranged. Big Endian thinking was influenced by the way numbers and written language are normally presented from left to right. Little Endian thinking, on the other hand, placed more emphasis on numerical significance and the relationship between significance and increasing memory addresses.
 
