@@ -51,7 +51,7 @@ The same value in a Little Endian system would look as follows. The least signif
 | 1002    | 34   |
 | 1003    | 12   |
 
-At this point, an interesting question came to my mind. If both systems do not change the value itself, then why do we have two of them? Can we not agree on one system only and use that? For example, Big Endian.
+At this point, an interesting question came to my mind. **If both systems do not change the value itself, then why do we have two of them? Can we not agree on one system only and use that? For example, Big Endian**.
 
 I am back :D. I was searching for a reading that answers this question and found a very interesting one, [On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf), written by Danny Cohen. He explains the situation in a way that I found particularly interesting.
 
