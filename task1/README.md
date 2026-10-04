@@ -30,16 +30,13 @@ As you can observe the most significant byte, 0x12 is placed at the lowest signi
 | 1002    |  34  |
 | 1003    | 12   |
 
-My personal question came to the stage after investigating these fundamentals. If these both systems does not change the content of the value, then why do we have 2 of them? Can we not agree on 1 system only and use that? For example Big Endian system. I am back :D. I was searching for a reading that answers these question and found a very interesting one ([On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf)) by Danny Cohen. He explains it as follows
+My personal question came to the stage after investigating these fundamentals. If these both systems does not change the content of the value, then why do we have 2 of them? Can we not agree on 1 system only and use that? For example Big Endian system. I am back :D. I was searching for a reading that answers these question and found a very interesting one ([On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf)) by Danny Cohen. He explains it as follows in my words:
 
-Questions
-How many bytes are required?
-Which byte is the most significant byte?
-Which byte is the least significant byte?
-What memory addresses would these bytes occupy?
-What changes when the system uses big endian?
-What changes when the system uses little endian?
-Does the numerical value itself change?
+Cohen explains that the two systems emerged because designers tried to resolve a conflict between how we write human languages and how we represent numbers mathematically. Big Endian defenders chose left-to-right alignment because it matches how English text is written. Little Endian defenders chose low-address alignment because it matches mathematical logic, where higher memory addresses correspond to higher values. 
+
+> **Cohen:** English, like most modern languages, suggests that we arrange computer words from left to right... The convention introduced by our numbering system places the wide end on the left and the narrow end on the right.
+> **Cohen:**: They believe in starting with the narrow end of every word and that low addresses are of lower order than high addresses... This order is consistent with itself, with the Hebrew language, and (more importantly) with mathematics, because significance increases with increasing item numbers (address).
+
 
 
 ## 3. How Is a Multi Byte Value Represented in Memory?
