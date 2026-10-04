@@ -2,9 +2,12 @@
 
 ## Course Information
 
-**Course:** Advanced Software Paradigms - CSCI 6221  
+**Course:** Advanced Software Paradigms - CSCI 6221 
+
 **Semester:** Fall 2026
+
 **University:** ADA University
+
 **Deadline:** 06/10/2026
 
 
