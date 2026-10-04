@@ -21,7 +21,7 @@ Breaking the value into parts we get <mark>0x12  0x34  0x56  0x78</mark>. For th
 | 1002    | 56   |
 | 1003    | 78   |
 
-As you can observe the most significant bit, 0x12 is placed at the lowest significant byte, 1000. This is exactly how Big endian works. The same value in Little endian system would look like as follows: The least significant big is placed at the lowest significant byte.   
+As you can observe the most significant byte, 0x12 is placed at the lowest significant byte, 1000. This is exactly how Big endian works. The same value in Little endian system would look like as follows: The least significant byte is placed at the lowest significant byte.   
 
 | Address | Byte |
 |---------|------|
@@ -30,7 +30,7 @@ As you can observe the most significant bit, 0x12 is placed at the lowest signif
 | 1002    |  34  |
 | 1003    | 12   |
 
-
+My personal question came to the stage after investigating these fundamentals. If these both systems does not change the content of the value, then why do we have 2 of them? Can we not agree on 1 system only and use that? For example Big Endian system. I am back :D. I was searching for a reading that answers these question and found a very interesting one ((On Holy Wars and a Plea for Peace)[https://gwern.net/doc/cs/algorithm/1981-cohen.pdf]) by Danny Cohen. He explains it as follows
 
 Questions
 How many bytes are required?
