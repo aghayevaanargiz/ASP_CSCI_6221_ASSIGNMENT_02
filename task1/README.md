@@ -51,6 +51,18 @@ The same value in a Little Endian system would look as follows. The least signif
 | 1002    | 34   |
 | 1003    | 12   |
 
+### A Small Thought Experiment
+
+At this point, I wanted to see what would actually happen if two systems used different byte orders. Let's imagine that a Little Endian computer stores the value <mark>0x12345678</mark> and sends its four bytes to another computer. The bytes would be sent as:
+
+<mark>78 56 34 12</mark>
+
+Now imagine that the receiving computer assumes that the first byte is the most significant byte, as in a Big Endian representation. It would interpret the same four bytes as:
+
+<mark>0x78563412</mark>
+
+The bytes themselves did not change during the transfer. The problem is that the two systems interpreted the same sequence of bytes differently. This small example helped me understand why Endianness is not just a matter of how values are stored in memory. It can become a problem when the byte representation of a value is shared between systems that use different conventions. This is the reason why Endianness matters. 
+
 At this point, an interesting question came to my mind. **If both systems do not change the value itself, then why do we have two of them? Can we not agree on one system only and use that? For example, Big Endian**.
 
 I was searching for a reading that answers this question and found a very interesting one, [On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf), written by Danny Cohen. He explains the situation in a way that I found particularly interesting.
