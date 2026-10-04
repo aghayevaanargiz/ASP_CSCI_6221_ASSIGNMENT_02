@@ -75,3 +75,7 @@ This also changed my initial view of the problem. At first, I thought that if bo
 
 
 ## References
+[Programming languages, C](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf)
+[Programming languages, C](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf)
+[On Holy Wars and a Plea for Peace](https://gwern.net/doc/cs/algorithm/1981-cohen.pdf)
+
