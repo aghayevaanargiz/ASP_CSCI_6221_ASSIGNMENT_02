@@ -10,9 +10,24 @@ As we said earlier Endianness solves the problem of deciding how to order bytes 
 
 What is byte? Byte is addressable unit of data storage large enough to hold any member of the basic character set of the execution environment. ([Programming languages — C](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf)). This is a bit technical definition for a byte. If we have to simplify it, we can say a byte is the basic unit of digital information in computers, made up of eight smaller units called bits. As we mentioned earlier some information requires more memory storage, more than a byte or 8 bits, in computers memory. At this point the value is split across 8 bits and put in a specific order sequentially, in Big Endian order or Little endian order. I want to mention a small note. While searching on google i saw several discussion made around whether Endianness describe the ordering of bytes or bits. Endianness deals with the ordering of bytes, bits within a single byte are handled consistently by the memory architecture's byte-addressing scheme.  
 
-**Big Endian vs Little Endian**- In a big-endian system, the most significant byte (MSB) is placed at the lowest memory address, while in Little Endian system the least significant byte (LSB) is placed at the lowest memory address. I want to follow a specific example to explain it rather than sinking in technical terminology. Let's take a specific example: <mark>0x12345678</mark>. 
+**Big Endian vs Little Endian**- In a big-endian system, the most significant byte (MSB) is placed at the lowest memory address, while in Little Endian system the least significant byte (LSB) is placed at the lowest memory address ([Programming languages — C](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf)). I want to follow a specific example to explain it rather than sinking in technical terminology. Let's take a specific example: <mark>0x12345678</mark>. 
 
-Breaking the value into parts we get <mark>0x12  0x34  0x56  0x78</mark>.
+Breaking the value into parts we get <mark>0x12  0x34  0x56  0x78</mark>. For this example as you can see we need 4 bytes to store this value. The concept of Most Significant Byte (MSB) refers to the high order byte, or in other words, the byte that has the highest value or contributes the most to the overall value (LSB is opposite). In our example 0x12 is our most significant byte. For big endian system the memory storage for our example would be something like below:
+
+Address|    Byte
+1000 |       12
+1001  |      34
+1002 |       56
+1003  |      78
+
+Questions
+How many bytes are required?
+Which byte is the most significant byte?
+Which byte is the least significant byte?
+What memory addresses would these bytes occupy?
+What changes when the system uses big endian?
+What changes when the system uses little endian?
+Does the numerical value itself change?
 
 
 ## 3. How Is a Multi Byte Value Represented in Memory?
