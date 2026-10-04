@@ -12,13 +12,25 @@ What is byte? Byte is addressable unit of data storage large enough to hold any 
 
 **Big Endian vs Little Endian**- In a big-endian system, the most significant byte (MSB) is placed at the lowest memory address, while in Little Endian system the least significant byte (LSB) is placed at the lowest memory address ([Programming languages — C](https://www.open-std.org/jtc1/sc22/wg14/www/docs/n3088.pdf)). I want to follow a specific example to explain it rather than sinking in technical terminology. Let's take a specific example: <mark>0x12345678</mark>. 
 
-Breaking the value into parts we get <mark>0x12  0x34  0x56  0x78</mark>. For this example as you can see we need 4 bytes to store this value. The concept of Most Significant Byte (MSB) refers to the high order byte, or in other words, the byte that has the highest value or contributes the most to the overall value (LSB is opposite). In our example 0x12 is our most significant byte. For big endian system the memory storage for our example would be something like below:
+Breaking the value into parts we get <mark>0x12  0x34  0x56  0x78</mark>. For this example as you can see we need 4 bytes to store this value. The concept of Most Significant Byte (MSB) refers to the high order byte, or in other words, the byte that has the highest value or contributes the most to the overall value (LSB is opposite). The intuitive example is given by ([What is Endianness? Big-Endian & Little-Endian](https://www.geeksforgeeks.org/dsa/little-and-big-endian-mystery/)) is quite helpful. It basically says in number 2,984 changing 4 to 5 requires increasing the number by 1 while changing 2 to 3 requires increasing the number by 1000. So, in our example 0x12 is our most significant byte. For big endian system the memory storage for our example would be something like below:
 
-Address|    Byte
-1000 |       12
-1001  |      34
-1002 |       56
-1003  |      78
+| Address | Byte |
+|---------|------|
+| 1000    | 12   |
+| 1001    | 34   |
+| 1002    | 56   |
+| 1003    | 78   |
+
+As you can observe the most significant bit, 0x12 is placed at the lowest significant byte, 1000. This is exactly how Big endian works. The same value in Little endian system would look like as follows: The least significant big is placed at the lowest significant byte.   
+
+| Address | Byte |
+|---------|------|
+| 1000    |  78  |
+| 1001    | 56   |
+| 1002    |  34  |
+| 1003    | 12   |
+
+
 
 Questions
 How many bytes are required?
