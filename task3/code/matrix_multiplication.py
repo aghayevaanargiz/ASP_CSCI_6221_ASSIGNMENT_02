@@ -40,6 +40,11 @@ for i in range(number_of_rows_matrix_B):
 
     rows_of_matrix_B.append(row)
 
-# No need to create column lists seperately I realized rows already contains columns. 
+# Now let's convert our lists into numpy arrays
+
+matrix_A = np.array(rows_of_matrix_A)
+matrix_B = np.array(rows_of_matrix_B)
+
+
 
 
