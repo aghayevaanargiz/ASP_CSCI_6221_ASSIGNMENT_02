@@ -88,5 +88,8 @@ output is
 ```
 **My observation**. Great, the results show that the list does not increase its reported size every time a new element is added. The empty list already reports 40 bytes and after adding the first element the reported size becomes 72 bytes. It then remains 72 bytes as elements are added until the fifth element when it increases to 104 bytes. A similar pattern can be observed between the fifth and eighth elements. This suggests that the list may have additional storage available beyond the elements currently stored in it. Therefore, the results support the idea that list growth involves allocating additional space rather than increasing the reported size for every individual element.
 
+## 4. Explanation 
+
+
 
 
