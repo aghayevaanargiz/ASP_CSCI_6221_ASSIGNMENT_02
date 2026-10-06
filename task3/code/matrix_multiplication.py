@@ -1,4 +1,5 @@
 import numpy as np
+import time
 
 # Let's get the size of the matrices from user.
 
