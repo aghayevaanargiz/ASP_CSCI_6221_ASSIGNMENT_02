@@ -43,9 +43,9 @@ I will create table to run this on different number of elements and record the o
 
 | Number of elements | Size of Tuple | Size of List |
 |---------|------|------|
-| 0    |   | |
-| 1    |   ||
-| 2    |   ||
+| 0    | 24 | 40 |
+| 1    | 32| 48 |
+| 2    | | |
 | 3    | 48  | 72 |
 
 
