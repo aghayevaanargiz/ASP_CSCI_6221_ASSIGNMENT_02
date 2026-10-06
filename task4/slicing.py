@@ -18,3 +18,5 @@ for i in range(number_of_rows_matrix_A):
     if len(row) != number_of_columns_matrix_A:
         print("The number of elements in the row does not match the matrix dimensions.")
         exit()
+        
+    rows_of_matrix_A.append(row)
