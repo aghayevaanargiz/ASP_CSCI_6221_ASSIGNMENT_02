@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int main {
+int main () {
     int number_of_rows_matrix_A;
     int number_of_rows_matrix_B;
     int number_of_columns_matrix_A;
@@ -30,8 +30,14 @@ int main {
 
     // Using vectors as it is not prefixed in size
     
-    vector<vector<int>> matrix_A;
-    vector<vector<int>> matrix_B;
+    vector<vector<int>> matrix_A(
+        number_of_rows_matrix_A,
+        vector<int>(number_of_columns_matrix_A)
+    );
+    vector<vector<int>> matrix_B(
+        number_of_rows_matrix_B,
+        vector<int>(number_of_columns_matrix_B)
+    );
 
     
 }
