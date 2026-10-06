@@ -65,9 +65,15 @@ int main () {
             }
         }
     }
-    cout << "Result of matrix multiplication:" << endl;
-
     
+    cout << "Result of matrix multiplication:" << endl;
+    
+    for (int i = 0; i < number_of_rows_matrix_A; i++) {
+        for (int j = 0; j < number_of_columns_matrix_B; j++) {
+            cout << multiplication[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
 
 
