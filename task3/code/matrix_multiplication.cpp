@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <chrono>
 
 using namespace std;
 
@@ -58,13 +59,23 @@ int main () {
         vector<int>(number_of_columns_matrix_B, 0)
     );
 
+   auto start = chrono::high_resolution_clock::now();
+
     for (int i = 0; i < number_of_rows_matrix_A; i++) {
         for (int j = 0; j < number_of_columns_matrix_B; j++) {
             for (int k = 0; k < number_of_columns_matrix_A; k++) {
-                multiplication[i][j] += matrix_A[i][k] * matrix_B[k][j];          
+                multiplication[i][j] += matrix_A[i][k] * matrix_B[k][j];
             }
         }
     }
+    
+    auto end = chrono::high_resolution_clock::now();
+    
+    chrono::duration<double> execution_time = end - start;
+
+    cout << "Execution time: "
+         << execution_time.count()
+         << " seconds" << endl;
     
     cout << "Result of matrix multiplication:" << endl;
     
@@ -74,8 +85,6 @@ int main () {
         }
         cout << endl;
     }
-
-
     
     return 0;
 }
