@@ -89,6 +89,11 @@ output is
 **My observation**. Great, the results show that the list does not increase its reported size every time a new element is added. The empty list already reports 40 bytes and after adding the first element the reported size becomes 72 bytes. It then remains 72 bytes as elements are added until the fifth element when it increases to 104 bytes. A similar pattern can be observed between the fifth and eighth elements. This suggests that the list may have additional storage available beyond the elements currently stored in it. Therefore, the results support the idea that list growth involves allocating additional space rather than increasing the reported size for every individual element.
 
 ## 4. Explanation 
+### 4.1 What does __sizeof__() measure?
+According to the [Python Official Documentation](https://docs.python.org/3/library/sys.html) the size reported by these experiments represents the memory directly associated with that object and does not include the memory used by objects that it refers to. The documentation also explains that sys.getsizeof() calls the object's __sizeof__() method. Therefore, in this experiment, the values returned by __sizeof__() should be understood as the size of the tuple or list object itself, rather than the total memory used by all of its elements.
+
+Putting technical language aside, this is simply means when the tuple (1, 2, 3) reports 48 bytes, this does not mean that the three integer objects together occupy 48 bytes. The result describes the memory associated with the tuple object. 
+
 
 
 
