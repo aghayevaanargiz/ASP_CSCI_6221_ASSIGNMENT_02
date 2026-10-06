@@ -14,4 +14,18 @@ Before doing the experiment, I expect the tuple and list to have different sizes
 
 The experiment was conducted using CPython 3.13.6 on a 64-bit Windows environment. The Python implementation was verified using the `sys` module.
 
+```python
+import sys
+
+print(sys.version)
+print(sys.implementation.name)
+```
+
+The output was:
+
+```text
+3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]
+cpython
+```
+
 
