@@ -53,3 +53,9 @@ int main () {
         }
     }   
 }
+
+
+vector<vector<int>> multiplication(
+    number_of_rows_matrix_A;
+    vector<int>(number_of_columns_matrix_B, 0)
+);
