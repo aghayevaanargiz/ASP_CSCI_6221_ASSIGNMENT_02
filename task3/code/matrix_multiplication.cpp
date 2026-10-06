@@ -42,28 +42,30 @@ int main () {
     for (int i = 0; i< number_of_rows_matrix_A; i++){
         for (int j = 0; j < number_of_columns_matrix_A; j++) {
             cout << "Enter element [" << i << "][" << j << "] of matrix A: "; // we dont get the values as a raw this time 
-            cin >> matrix_A[i][j];;
+            cin >> matrix_A[i][j];
         }
     }
 
     for (int i = 0; i< number_of_rows_matrix_B; i++){
         for (int j = 0; j < number_of_columns_matrix_B; j++) {
             cout << "Enter element [" << i << "][" << j << "] of matrix B: ";
-            cin >> matrix_B[i][j];;
+            cin >> matrix_B[i][j];
         }
-    }   
-}
+    }  
 
+    vector<vector<int>> multiplication(
+        number_of_rows_matrix_A;
+        vector<int>(number_of_columns_matrix_B, 0)
+    );
 
-vector<vector<int>> multiplication(
-    number_of_rows_matrix_A;
-    vector<int>(number_of_columns_matrix_B, 0)
-);
-
-for (int i = 0; i < number_of_rows_matrix_A; i++) {
-    for (int j = 0; j < number_of_columns_matrix_B; j++) {
-        for (int k = 0; k < number_of_columns_matrix_A; k++) {
-            multiplication[i][j] += matrix_A[i][k] * matrix_B[k][j];          
+    for (int i = 0; i < number_of_rows_matrix_A; i++) {
+        for (int j = 0; j < number_of_columns_matrix_B; j++) {
+            for (int k = 0; k < number_of_columns_matrix_A; k++) {
+                multiplication[i][j] += matrix_A[i][k] * matrix_B[k][j];          
+            }
         }
     }
 }
+
+
+
