@@ -1,4 +1,6 @@
 #include <iostream>
+#include <vector>
+
 using namespace std;
 
 int main {
@@ -25,4 +27,11 @@ int main {
       cout<< "The multiplication cannot be calculated! Check the matrix size." << endl;
       return 0;
     }
+
+    // Using vectors as it is not prefixed in size
+    
+    vector<vector<int>> matrix_A;
+    vector<vector<int>> matrix_B;
+
+    
 }
