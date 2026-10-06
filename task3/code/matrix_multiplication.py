@@ -16,8 +16,6 @@ if number_of_columns_matrix_A != number_of_rows_matrix_B:
 
 rows_of_matrix_A = []
 rows_of_matrix_B = []
-columns_of_matrix_A = []
-columns_of_matrix_B = []
 
 # Okay first let's get the row's of matrix A
 
@@ -42,17 +40,6 @@ for i in range(number_of_rows_matrix_B):
 
     rows_of_matrix_B.append(row)
 
-
-# Now let's create columns
-
-for i in range(number_of_rows_matrix_A):
-    column_input = input("Enter a column of matrix A separated by comma: ")
-    columnt = column_input.split(",")
-
-    for j in range(len(column)):
-        column[j] = int(column[j])
-
-    rows_of_matrix_A.append(column)
-
+# No need to create column lists seperately I realized rows already contains columns. 
 
 
