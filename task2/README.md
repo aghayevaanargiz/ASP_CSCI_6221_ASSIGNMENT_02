@@ -44,9 +44,18 @@ I will create table to run this on different number of elements and record the o
 | Number of elements | Size of Tuple | Size of List |
 |---------|------|------|
 | 0    | 24 | 40 |
-| 1    | 32| 48 |
-| 2    | | |
-| 3    | 48  | 72 |
+| 1    | 32 | 48 |
+| 2    | 40 | 56 |
+| 3    | 48 | 72 |
+| 4    | 56 | 72 |
+| 5    | 64 | 88 |
+| 6    | 72 | 88 |
+| 7    | 80 | 104  |
+| 8    | 88 | 104  |
+| 9    | 96 |120  |
+| 10   | 104 | 120 |
+
+My initial observation: Looking at the tuple column as the number of elements increases by one each time the size of the tuple gets increased by 8 bytes. The same pattern shows itself in size of list columns as well. Oh, no does it really? 
 
 
 
