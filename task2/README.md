@@ -27,5 +27,14 @@ The output was:
 3.13.6 (tags/v3.13.6:4e66535, Aug  6 2025, 14:36:00) [MSC v.1944 64 bit (AMD64)]
 cpython
 ```
+### 3.2 Basic Tuple and List Comparison
+The first experiment compares a tuple and a list containing the same three integer values.
 
+```python
+tpl = (1, 2, 3)
+lst = [1, 2, 3]
+
+print("Tuple:", tpl.__sizeof__())
+print("List:", lst.__sizeof__())
+```
 
