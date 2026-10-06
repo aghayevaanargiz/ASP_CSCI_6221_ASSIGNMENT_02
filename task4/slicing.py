@@ -21,6 +21,9 @@ for i in range(number_of_rows_matrix_A):
         
     rows_of_matrix_A.append(row)
 
+# convert the rows to numpy array 
+matrix_A = np.array(rows_of_matrix_A)
+
 # Okay now let's ask user for what slices they want
 
 start_row = int(input("Enter starting row: "))
@@ -28,4 +31,7 @@ end_row = int(input("Enter ending row: "))
 start_column = int(input("Enter starting column: "))
 end_column = int(input("Enter ending column: "))
 
+sliced_matrix = matrix_A[start_row:end_row, start_column:end_column]
 
+print("\nSliced matrix:")
+print(sliced_matrix)
