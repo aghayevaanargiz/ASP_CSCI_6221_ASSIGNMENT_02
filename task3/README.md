@@ -20,7 +20,7 @@ multiplication = matrix_A @ matrix_B
 
 I also added a timer around the multiplication operation so that the input time is not included in the measurement.
 
-For testing, I used:
+As an initial test, I used a 2×2 matrix and a 2×3 matrix:
 
 ```text
 A = [[2, 3],
@@ -37,11 +37,7 @@ The program produced:
  [24 33 42]]
 ```
 
-The measured execution time was:
-
-```text
-3.320001997053623e-05 seconds
-```
+I also tested the program with 5×5 matrices for the execution time comparison.
 
 ## 3. C++ Implementation
 
@@ -57,7 +53,7 @@ The main calculation is:
 multiplication[i][j] += matrix_A[i][k] * matrix_B[k][j];
 ```
 
-I used the same matrices as in the Python experiment:
+I first tested the C++ implementation using the same 2×2 and 2×3 matrices used in the Python implementation:
 
 ```text
 A = [[2, 3],
@@ -74,11 +70,7 @@ The result was:
 24 33 42
 ```
 
-The execution time for the multiplication was:
-
-```text
-1.089e-06 seconds
-```
+I then used 5×5 matrices for the execution time comparison.
 
 I placed the timer around the multiplication loops so that entering the matrices and printing the result were not included in the measured time.
 
@@ -103,7 +95,7 @@ I calculated the expected result manually:
  [43, 50]]
 ```
 
-The test compares the calculated matrix with this expected matrix. If they are equal, the program prints `Test passed!`.
+The test compares the calculated matrix with the expected matrix. If they are equal, the program prints `Test passed!`.
 
 The test produced:
 
@@ -132,26 +124,48 @@ However, the number of lines does not necessarily show which implementation is b
 
 ## 6. Execution Time
 
-I used the same matrices for both implementations:
+For the execution time comparison, I used 5×5 matrices in both programs.
+
+Matrix A was:
 
 ```text
-A = [[2, 3],
-     [4, 5]]
-
-B = [[1, 2, 3],
-     [4, 5, 6]]
+A = [[1, 2, 3, 4, 5],
+     [1, 2, 3, 4, 5],
+     [1, 2, 3, 4, 5],
+     [1, 2, 3, 4, 5],
+     [1, 2, 3, 4, 5]]
 ```
 
-The measured times were:
+Matrix B was:
 
-| Implementation |                Execution time |
-| -------------- | ----------------------------: |
-| Python + NumPy | 3.320001997053623e-05 seconds |
-| C++            |             1.089e-06 seconds |
+```text
+B = [[5, 4, 3, 2, 1],
+     [5, 4, 3, 2, 1],
+     [5, 4, 3, 2, 1],
+     [5, 4, 3, 2, 1],
+     [5, 4, 3, 2, 1]]
+```
 
-In this experiment, the C++ implementation was faster than the Python implementation.
+Both implementations produced the same result:
 
-However, I would not consider this result enough to conclude that C++ is always faster than Python. The matrices were very small, so the actual multiplication took an extremely short amount of time. Because of this, timing overhead and the precision of the measurement can have a significant effect on the result.
+```text
+75 60 45 30 15
+75 60 45 30 15
+75 60 45 30 15
+75 60 45 30 15
+75 60 45 30 15
+```
+
+The measured execution times were:
+
+| Implementation | Matrix size | Execution time                |
+| -------------- | ----------- | ----------------------------- |
+| Python + NumPy | 5×5 × 5×5   | 3.729993477463722e-05 seconds |
+| C++            | 5×5 × 5×5   | 3.924e-06 seconds             |
+
+In this experiment, the C++ implementation was faster. The measured C++ time was approximately 9.5 times smaller than the Python + NumPy time.
+
+However, I would not consider this result enough to conclude that C++ is always faster than Python. The matrices were still relatively small, so the actual multiplication took a very short amount of time. Because of this, timing overhead and the precision of the measurement can have a noticeable effect on the result.
 
 There is also another important difference between my two implementations. In C++, I manually implemented the multiplication using nested loops. In Python, I used NumPy's `@` operator. NumPy performs the operation using optimized compiled code, so this experiment is not simply a comparison of Python and C++ themselves.
 
@@ -165,7 +179,9 @@ In Python, NumPy hides this process behind the `@` operator. This makes the Pyth
 
 I also found that making the programs accept arbitrary matrix dimensions was more useful than writing them only for a fixed example. It allowed me to test rectangular matrices such as a 2×2 matrix multiplied by a 2×3 matrix.
 
-Overall, both implementations produced the correct result for my tests. The C++ version was longer because I implemented more of the multiplication process myself, while the Python version relied more on the functionality provided by NumPy.
+The 5×5 experiment also showed that the C++ implementation took less measured time in this particular test. However, I think a larger benchmark with more repetitions would be needed before making a stronger performance conclusion.
+
+Overall, both implementations produced the correct results for my tests. The C++ version was longer because I implemented more of the multiplication process myself, while the Python version relied more on the functionality provided by NumPy.
 
 ## 8. Files
 
