@@ -42,7 +42,7 @@ The screenshots below show the outputs produced by each implementation.
 
 ### Python/NumPy Output
 
-<img src="images/slicing_py_output.png" alt="Python slicing output" width="300" height="500">
+<img src="images/slicing_py_output.png" alt="Python slicing output" width="300" height="900">
 
 ### C++ Output
 
