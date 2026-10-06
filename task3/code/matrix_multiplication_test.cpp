@@ -4,8 +4,8 @@
 using namespace std;
 
 vector<vector<int>> multiplyMatrices(
-    vector<vector<int>> matrix_A,
-    vector<vector<int>> matrix_B
+    const vector<vector<int>>& matrix_A,
+    const vector<vector<int>>& matrix_B
 ) {
     int rows_A = matrix_A.size();
     int columns_A = matrix_A[0].size();
@@ -29,27 +29,53 @@ vector<vector<int>> multiplyMatrices(
 
 int main() {
 
-    vector<vector<int>> A = {
+    // Test 1: 2x2 matrix multiplication
+    vector<vector<int>> A1 = {
         {1, 2},
         {3, 4}
     };
 
-    vector<vector<int>> B = {
+    vector<vector<int>> B1 = {
         {5, 6},
         {7, 8}
     };
 
-    vector<vector<int>> expected = {
+    vector<vector<int>> expected1 = {
         {19, 22},
         {43, 50}
     };
 
-    vector<vector<int>> result = multiplyMatrices(A, B);
+    vector<vector<int>> result1 = multiplyMatrices(A1, B1);
 
-    if (result == expected) {
-        cout << "Test passed!" << endl;
+    if (result1 == expected1) {
+        cout << "Test 1 passed!" << endl;
     } else {
-        cout << "Test failed!" << endl;
+        cout << "Test 1 failed!" << endl;
+    }
+
+
+    // Test 2: 2x2 multiplied by 2x3 matrix
+    vector<vector<int>> A2 = {
+        {2, 3},
+        {4, 5}
+    };
+
+    vector<vector<int>> B2 = {
+        {1, 2, 3},
+        {4, 5, 6}
+    };
+
+    vector<vector<int>> expected2 = {
+        {14, 19, 24},
+        {24, 33, 42}
+    };
+
+    vector<vector<int>> result2 = multiplyMatrices(A2, B2);
+
+    if (result2 == expected2) {
+        cout << "Test 2 passed!" << endl;
+    } else {
+        cout << "Test 2 failed!" << endl;
     }
 
     return 0;
