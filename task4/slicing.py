@@ -25,6 +25,7 @@ for i in range(number_of_rows_matrix_A):
 
 start_row = int(input("Enter starting row: "))
 end_row = int(input("Enter ending row: "))
-
+start_column = int(input("Enter starting column: "))
+end_column = int(input("Enter ending column: "))
 
 
