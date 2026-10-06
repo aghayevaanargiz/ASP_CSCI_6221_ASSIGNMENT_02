@@ -46,4 +46,10 @@ int main () {
     
     cout << "Enter ending column: ";
     cin >> start_row;
+
+    cout << "\nSliced matrix:" << endl;
+
+    for (int i = start_row; i < end_row; i++) {
+       
+    }
 }
