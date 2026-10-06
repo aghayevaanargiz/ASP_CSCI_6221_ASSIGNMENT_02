@@ -8,5 +8,6 @@ The purpose of this experiment is to investigate how Python reports the memory s
 
 Before doing the experiment, I expect the tuple and list to have different sizes even if they contain the same elements. I also expect the list size to change differently because lists are mutable, so Python may allocate some extra space for future changes. Tuples are different because their structure cannot be changed after they are created. By comparing the number of elements with the reported size, I hope to get a better idea of how lists and tuples are stored internally.
 
+## 3. Experimental Setup
 
-
+### 3.1 Python Environment
