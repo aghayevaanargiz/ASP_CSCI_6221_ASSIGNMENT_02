@@ -94,7 +94,10 @@ According to the [Python Official Documentation](https://docs.python.org/3/libra
 
 Putting technical language aside, this is simply means when the tuple (1, 2, 3) reports 48 bytes, this does not mean that the three integer objects together occupy 48 bytes. The result describes the memory associated with the tuple object. 
 
+### 4.2 Why does the tuple size increase consistently?
 
+So, as the [Python Official Documentation](https://docs.python.org/3/library/sys.html) confirms, tuples are immutable, meaning that their elements cannot be changed after the tuple is created. Intuitively, this also explains why a tuple does not need additional storage for potential future elements. The size of a tuple is fixed when it is created, so Python already knows how much space is needed for its elements. This also helps explain why lists support operations such as append(), while tuples do not.
 
+Another meaningful question is why the reported size increases by 8 bytes each time another element is added to the tuple. In CPython 3.13 on a 64 bit system, a typical Python `int` object starts at 28 bytes. If the complete integer object itself was stored inside the tuple, then adding one integer would mean that the size of the tuple should increase by around 28 bytes. However, in our experiment, it increases by only 8 bytes. This suggests that the integer itself is not stored directly inside the tuple. Instead, the tuple stores a reference to the integer object, and this reference corresponds to the 8 byte increase that we observe.
 
 
