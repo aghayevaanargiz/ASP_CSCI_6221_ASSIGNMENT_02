@@ -27,6 +27,10 @@ for i in range(number_of_rows_matrix_A):
     for j in range(len(row)):
         row[j] = int(row[j])
 
+    if len(row) != number_of_columns_matrix_A:
+        print("The number of elements in the row does not match the matrix dimensions.")
+        exit()
+
     rows_of_matrix_A.append(row)
 
 
@@ -39,6 +43,10 @@ for i in range(number_of_rows_matrix_B):
     for j in range(len(row)):
         row[j] = int(row[j])
 
+    if len(row) != number_of_columns_matrix_B:
+        print("The number of elements in the row does not match the matrix dimensions.")
+        exit()
+        
     rows_of_matrix_B.append(row)
 
 # Now let's convert our lists into numpy arrays
