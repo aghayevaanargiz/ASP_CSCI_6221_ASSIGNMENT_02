@@ -56,7 +56,13 @@ matrix_B = np.array(rows_of_matrix_B)
 
 # Finally let's multiply the matrices and print the results
 
+start = time.perf_counter()
+
 multiplication = matrix_A @ matrix_B
+
+end = time.perf_counter()
+
+print("Execution time:", end - start, "seconds")
 
 print(multiplication)
 
