@@ -41,12 +41,12 @@ The outputs for both are 48 and 24 correspondingly for Tuple and List. The tuple
 
 I will create table to run this on different number of elements and record the outputs correspondingly:
 
-| Number of elements | Size of List | Size of Tuple |
+| Number of elements | Size of Tuple | Size of List |
 |---------|------|------|
-| 0    | 12   ||
-| 1    | 34   ||
-| 2    | 56   ||
-| 3    | 78   ||
+| 0    |   | |
+| 1    |   ||
+| 2    |   ||
+| 3    | 48  | 72 |
 
 
 
