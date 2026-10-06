@@ -35,6 +35,15 @@ int main () {
     int start_column;
     int end_column;
 
-    
+    cout << "Enter starting row: ";
+    cin >> start_row;
 
+    cout << "Enter ending row: ";
+    cin >> start_row;
+
+    cout << "Enter starting column: ";
+    cin >> start_row;
+    
+    cout << "Enter ending column: ";
+    cin >> start_row;
 }
