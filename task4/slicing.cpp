@@ -29,3 +29,12 @@ int main () {
             cin >> matrix_A[i][j];
         }
     }
+
+    int start_row;
+    int end_row;
+    int start_column;
+    int end_column;
+
+    
+
+}
