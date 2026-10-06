@@ -15,13 +15,13 @@ int main () {
     cin >> number_of_rows_matrix_A;
     
     cout << "Enter number of columns for matrix A: ";
-    cin >> number_of_rows_matrix_A;
+    cin >> number_of_columns_matrix_A;
     
     cout << "Enter number of rows for matrix B: ";
-    cin >> number_of_rows_matrix_A;
+    cin >> number_of_rows_matrix_B;
     
     cout << "Enter number of columns for matrix B: ";
-    cin >> number_of_rows_matrix_A;
+    cin >> number_of_columns_matrix_B;
     
     if (number_of_columns_matrix_A != number_of_rows_matrix_B) {
       cout<< "The multiplication cannot be calculated! Check the matrix size." << endl;
@@ -41,9 +41,15 @@ int main () {
 
     for (int i = 0; i< number_of_rows_matrix_A; i++){
         for (int j = 0; j < number_of_columns_matrix_A; j++) {
-            cout << "Enter a row of matrix A separated by comma: ";
+            cout << "Enter element [" << i << "][" << j << "] of matrix A: "; // we dont get the values as a raw this time 
             cin >> matrix_A[i][j];;
         }
     }
-    
+
+    for (int i = 0; i< number_of_rows_matrix_B; i++){
+        for (int j = 0; j < number_of_columns_matrix_B; j++) {
+            cout << "Enter element [" << i << "][" << j << "] of matrix B: ";
+            cin >> matrix_B[i][j];;
+        }
+    }   
 }
