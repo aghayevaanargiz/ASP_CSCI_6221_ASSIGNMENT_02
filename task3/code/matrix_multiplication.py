@@ -45,6 +45,12 @@ for i in range(number_of_rows_matrix_B):
 matrix_A = np.array(rows_of_matrix_A)
 matrix_B = np.array(rows_of_matrix_B)
 
+# Finally let's multiply the matrices and print the results
+
+multiplication = matrix_A @ matrix_B
+
+print(multiplication)
+
 
 
 
