@@ -48,6 +48,12 @@ A2-Basics-of-PL/
 
 Each task contains a README file with the implementation details, results, analysis, and relevant observations.
 
+## AI Usage Disclaimer
+
+The Python implementations for Tasks 3 and 4 were completed by me. For the C-like language implementations, I occasionally used GPT to check whether I was implementing certain parts correctly, especially when I needed to recall the *vector implementation in C++*.
+
+Apart from these cases, I used AI tools mainly to improve the organization and presentation of my README files. I reviewed the README texts each time and provided my own feedback and critical analysis to make sure that the final content accurately reflected my work and understanding.
+
 ## Author
 
 **Nargiz Aghayeva**  
