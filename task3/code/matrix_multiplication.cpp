@@ -59,3 +59,11 @@ vector<vector<int>> multiplication(
     number_of_rows_matrix_A;
     vector<int>(number_of_columns_matrix_B, 0)
 );
+
+for (int i = 0; i < number_of_rows_matrix_A; i++) {
+    for (int j = 0; j < number_of_columns_matrix_B; j++) {
+        for (int k = 0; k < number_of_columns_matrix_A; k++) {
+            multiplication[i][j] += matrix_A[i][k] * matrix_B[k][j];          
+        }
+    }
+}
