@@ -28,7 +28,9 @@ The output was:
 cpython
 ```
 ### 3.2 Basic Tuple and List Comparison
-The first experiment compares a tuple and a list containing the same three integer values.
+
+### 3.2.1 The First Experiment 
+The first experiment compares a tuple and a list containing the same number of integer values. I will create table to run this on different number of elements and record the outputs correspondingly. 
 
 ```python
 tpl = (1, 2, 3)
@@ -38,7 +40,6 @@ print("Tuple:", tpl.__sizeof__())
 print("List:", lst.__sizeof__())
 ```
 
-I will create table to run this on different number of elements and record the outputs correspondingly:
 
 | Number of elements | Size of Tuple | Size of List |
 |---------|------|------|
@@ -56,6 +57,36 @@ I will create table to run this on different number of elements and record the o
 
 **My initial observation:** Looking at the tuple column, as the number of elements increases by one, the reported size of the tuple also increases by 8 bytes each time. The same pattern appeared in the list column as well. Oh, no does it really? Actually, after looking more carefully at the results, I noticed a different pattern. For the list, the reported size remains the same for some consecutive numbers of elements. For example, the size is 72 bytes for both 3 and 4 elements, and 88 bytes for both 5 and 6 elements. Another interesting observation is that the list size initially increases by 8 bytes per element, but after 3 elements, its size does not increase with every additional element. This makes me question why the list behaves differently from the tuple.
 
+> I have a question at this point in my mind. Does the list size change every time an element is added or does Python reserve some additional space for future elements?
+
+### 3.2.2 The Second Experiment 
+
+To investigate the question above further, I added elements to the same list one by one and recorded its reported size after each insertion.
+
+
+```python
+lst = []
+
+for i in range(11):
+    print(i, lst.__sizeof__())
+    lst.append(i)
+```
+
+output is 
+```text
+0 40                  
+1 72                             
+2 72                
+3 72
+4 72
+5 104
+6 104
+7 104
+8 104
+9 168
+10 168
+```
+**My observation**. Great, the results show that the list does not increase its reported size every time a new element is added. The empty list already reports 40 bytes and after adding the first element the reported size becomes 72 bytes. It then remains 72 bytes as elements are added until the fifth element when it increases to 104 bytes. A similar pattern can be observed between the fifth and eighth elements. This suggests that the list may have additional storage available beyond the elements currently stored in it. Therefore, the results support the idea that list growth involves allocating additional space rather than increasing the reported size for every individual element.
 
 
 
