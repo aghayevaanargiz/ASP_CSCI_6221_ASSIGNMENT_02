@@ -142,9 +142,11 @@ The results were:
 | Python         |            68 |
 | C++            |            105|
 
-The C++ implementation has 12 more lines than my Python implementation.
+The C++ implementation has 37 more lines than my Python implementation.
 
 I think one reason for this difference is that NumPy allows me to perform the matrix multiplication with a single operation, while in C++ I had to explicitly write the loops that calculate every element of the resulting matrix. The C++ program also handles the matrix elements individually through user input.
+
+In addition, I organized the C++ implementation using a separate multiplyMatrices() function. This makes the multiplication logic easier to reuse and allows me to test the same function separately with unit tests. This function structure adds some extra lines compared with putting all the multiplication logic directly inside main().
 
 However, the number of lines does not necessarily show which implementation is better. It only shows how much code I wrote for these particular implementations.
 
