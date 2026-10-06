@@ -39,5 +39,10 @@ int main () {
         vector<int>(number_of_columns_matrix_B)
     );
 
+    for (int i = 0; i< number_of_rows_matrix_A; i++){
+        cout << "Enter a row of matrix A separated by comma: ";
+        cin >> matrix_A;
+    }
+
     
 }
