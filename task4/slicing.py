@@ -20,3 +20,7 @@ for i in range(number_of_rows_matrix_A):
         exit()
         
     rows_of_matrix_A.append(row)
+
+# Okay now let's ask user for what slices they want
+
+
