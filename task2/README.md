@@ -96,8 +96,18 @@ Putting technical language aside, this is simply means when the tuple (1, 2, 3) 
 
 ### 4.2 Why does the tuple size increase consistently?
 
-So, as the [Python Official Documentation](https://docs.python.org/3/library/sys.html) confirms, tuples are immutable, meaning that their elements cannot be changed after the tuple is created. Intuitively, this also explains why a tuple does not need additional storage for potential future elements. The size of a tuple is fixed when it is created, so Python already knows how much space is needed for its elements. This also helps explain why lists support operations such as append(), while tuples do not.
+So, as the [Python Official Documentation](https://docs.python.org/3/library/sys.html) confirms, tuples are immutable, meaning that their elements cannot be changed after the tuple is created. Intuitively speaking, this also explains why a tuple does not need additional storage for potential future elements (which are never coming). The size of a tuple is fixed when it is created, so Python already knows how much space is needed for its elements. This also helps explain why lists support operations such as append(), while tuples do not.
 
 Another meaningful question is why the reported size increases by 8 bytes each time another element is added to the tuple. In CPython 3.13 on a 64 bit system, a typical Python `int` object starts at 28 bytes. If the complete integer object itself was stored inside the tuple, then adding one integer would mean that the size of the tuple should increase by around 28 bytes. However, in our experiment, it increases by only 8 bytes. This suggests that the integer itself is not stored directly inside the tuple. Instead, the tuple stores a reference to the integer object, and this reference corresponds to the 8 byte increase that we observe.
+
+### 4.3 Why does the list size behave differently?
+
+Unlike tuples, lists are mutable, so their number of elements can change after the list is created. Because of this, Python can allocate some additional space for future elements. This can explain why the reported size of the list does not increase every time an element is added. In the second experiment, for example, the size remains 72 bytes from 1 to 4 elements and then increases to 104 bytes when the list grows further. Therefore, the list appears to have additional allocated space that can be used before Python needs to allocate more space. 
+
+> Note: There is an interesting question in my mind which can explore why for 1 element in list we had 40 and 72 bytes in 2 different experiments. I think this would take me to much more detail and would get out of the scope of the task eventually. Therefore i do not explore it here.
+
+## 5. Conclusion
+
+In my experiment, I noticed a clear difference between the sizes of tuples and lists. The tuple size increased by 8 bytes every time I added another element. The list size behaved differently. It increased in steps, and sometimes adding an element did not change the reported size at all. I think this happens because tuples have a fixed structure after they are created, while lists can grow and Python keeps some extra space for possible future elements. So, from this experiment, I could see that the difference between immutable and mutable data structures can also be observed using `__sizeof__()`.
 
 
