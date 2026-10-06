@@ -140,7 +140,7 @@ The results were:
 | Implementation | Lines of code |
 | -------------- | ------------: |
 | Python         |            68 |
-| C++            |            80 |
+| C++            |            105|
 
 The C++ implementation has 12 more lines than my Python implementation.
 
