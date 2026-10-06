@@ -37,7 +37,6 @@ lst = [1, 2, 3]
 print("Tuple:", tpl.__sizeof__())
 print("List:", lst.__sizeof__())
 ```
-The outputs for both are 48 and 24 correspondingly for Tuple and List. The tuple and list contain the same three values, but their reported sizes are different. The tuple reports 48 bytes, while the list reports 72 bytes. Therefore, the list reports 24 bytes more memory than the tuple in this experiment.
 
 I will create table to run this on different number of elements and record the outputs correspondingly:
 
@@ -55,7 +54,8 @@ I will create table to run this on different number of elements and record the o
 | 9    | 96 |120  |
 | 10   | 104 | 120 |
 
-My initial observation: Looking at the tuple column as the number of elements increases by one each time the size of the tuple gets increased by 8 bytes. The same pattern shows itself in size of list columns as well. Oh, no does it really? 
+**My initial observation:** Looking at the tuple column, as the number of elements increases by one, the reported size of the tuple also increases by 8 bytes each time. The same pattern appeared in the list column as well. Oh, no does it really? Actually, after looking more carefully at the results, I noticed a different pattern. For the list, the reported size remains the same for some consecutive numbers of elements. For example, the size is 72 bytes for both 3 and 4 elements, and 88 bytes for both 5 and 6 elements. Another interesting observation is that the list size initially increases by 8 bytes per element, but after 3 elements, its size does not increase with every additional element. This makes me question why the list behaves differently from the tuple.
+
 
 
 
