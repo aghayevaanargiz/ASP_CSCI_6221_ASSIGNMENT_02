@@ -12,3 +12,16 @@ number_of_columns_matrix_B = int(input("Enter number of columns for matrix B: ")
 if number_of_columns_matrix_A != number_of_rows_matrix_B:
     print("The multiplication cannot be calculated! Check the matrix size.")
 
+# Now time to get the matrix values from user, I want to create a list and add the rows there as a sublist (might be stupid idea let's see)
+
+rows_of_matrix_A = []
+rows_of_matrix_A = []
+rows_of_matrix_A = []
+rows_of_matrix_A = []
+
+for i in range(number_of_rows_matrix_A):
+    input("Enter the rows of the matrix A: ")
+
+
+    
+
