@@ -42,11 +42,11 @@ The screenshots below show the outputs produced by each implementation.
 
 ### Python/NumPy Output
 
-![Python slicing output](slicing_py_output.png)
+![Python slicing output](images/slicing_py_output.png)
 
 ### C++ Output
 
-![C++ slicing output](slicing_cpp_output.png)
+![C++ slicing output](images/slicing_cpp_output.png)
 
 Both implementations produced the same sliced matrix, which confirms that the C++ implementation gives the same result as the NumPy implementation for this test case.
 
