@@ -19,6 +19,8 @@ rows_of_matrix_B = []
 columns_of_matrix_A = []
 columns_of_matrix_B = []
 
+# Okay first let's get the row's of matrix A
+
 for i in range(number_of_rows_matrix_A):
     row_input = input("Enter a row of matrix A separated by comma: ")
     row = row_input.split(",")
@@ -27,7 +29,18 @@ for i in range(number_of_rows_matrix_A):
         row[j] = int(row[j])
 
     rows_of_matrix_A.append(row)
-    
+
+
+# Not let's get the rows of matrix B the same loop implementation just for matrix B
+
+for i in range(number_of_rows_matrix_B):
+    row_input = input("Enter a row of matrix B separated by comma: ")
+    row = row_input.split(",")
+
+    for j in range(len(row)):
+        row[j] = int(row[j])
+
+    rows_of_matrix_B.append(row)
 
 
     
