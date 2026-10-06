@@ -216,9 +216,23 @@ Another difference is the loop order in the C++ implementations. My implementati
 
 ### Prompting
 
-I led ChatGPT by asking it to implement the same matrix multiplication task using NumPy for Python and a C-like language for the second implementation. The requirements included accepting matrices from the user, checking whether multiplication is possible, calculating the result, and measuring execution time.
+### Prompting
 
-I kept the generated implementations separate from my own code so that I could compare the two approaches rather than replacing my implementation with the ChatGPT version.
+My prompt asked it to implement matrix multiplication in Python using NumPy and in C++, while keeping the programs dynamic rather than using fixed matrix sizes.
+
+I specifically asked it to:
+
+- allow the user to enter the matrix dimensions and values;
+- check whether the matrices can be multiplied;
+- implement matrix multiplication using NumPy in Python;
+- implement the multiplication using loops in C++;
+- include execution time measurement;
+- keep the code general rather than hardcoding the test matrices;
+- write clean and readable code.
+
+I then tested the generated implementations using the same type of inputs as my own implementations and compared their structure and approach with my code.
+
+This allowed me to see how the same requirements could be implemented differently. ChatGPT focused more on modular functions and input validation, while my implementation was more direct and simpler.
 
 ### Comparison
 
