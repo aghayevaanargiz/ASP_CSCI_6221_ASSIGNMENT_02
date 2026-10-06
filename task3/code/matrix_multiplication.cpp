@@ -40,9 +40,10 @@ int main () {
     );
 
     for (int i = 0; i< number_of_rows_matrix_A; i++){
-        cout << "Enter a row of matrix A separated by comma: ";
-        cin >> matrix_A;
+        for (int j = 0; j < number_of_columns_matrix_A; j++) {
+            cout << "Enter a row of matrix A separated by comma: ";
+            cin >> matrix_A[i][j];;
+        }
     }
-
     
 }
