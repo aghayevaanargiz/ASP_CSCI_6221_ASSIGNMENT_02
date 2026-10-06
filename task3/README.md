@@ -2,7 +2,7 @@
 
 ## 1. Objective
 
-In this task, I implemented matrix multiplication in Python using NumPy arrays and in C++. I also wrote a unit test for the C++ implementation. After testing both programs, I compared their code size and execution time.
+In this task, I implemented matrix multiplication in Python using NumPy arrays and in C++. I also wrote unit tests for the C++ implementation. After testing both programs, I compared their code size and execution time.
 
 I made the programs accept the matrix dimensions and values from the user instead of using fixed matrices.
 
@@ -76,9 +76,13 @@ I placed the timer around the multiplication loops so that entering the matrices
 
 ## 4. Unit Testing
 
-I created a separate C++ file called `matrix_multiplication_test.cpp` to test whether the multiplication function gives the expected result.
+I created a separate C++ file called `matrix_multiplication_test.cpp` to test whether the matrix multiplication function gives the expected results.
 
-For the test, I used:
+I used two test cases with different matrix sizes.
+
+### Test 1
+
+For the first test, I used two 2×2 matrices:
 
 ```text
 A = [[1, 2],
@@ -88,20 +92,42 @@ B = [[5, 6],
      [7, 8]]
 ```
 
-I calculated the expected result manually:
+The expected result was:
 
 ```text
 [[19, 22],
  [43, 50]]
 ```
 
-The test compares the calculated matrix with the expected matrix. If they are equal, the program prints `Test passed!`.
+### Test 2
 
-The test produced:
+For the second test, I used a 2×2 matrix and a 2×3 matrix:
 
 ```text
-Test passed!
+A = [[2, 3],
+     [4, 5]]
+
+B = [[1, 2, 3],
+     [4, 5, 6]]
 ```
+
+The expected result was:
+
+```text
+[[14, 19, 24],
+ [24, 33, 42]]
+```
+
+For each test, the calculated result is compared with the expected result. If they are equal, the test prints that the test passed.
+
+The tests produced:
+
+```text
+Test 1 passed!
+Test 2 passed!
+```
+
+This checks the multiplication logic with both square and rectangular matrices.
 
 I ran the test using an online C++ compiler because I had a linker problem with my local C++ compiler when trying to create the test executable. The source code itself compiled successfully, but the local linker did not create the executable.
 
@@ -198,9 +224,11 @@ task3/
 └── README.md
 ```
 
-The two main implementations are `matrix_multiplication.py` and `matrix_multiplication.cpp`. The C++ unit test is in `matrix_multiplication_test.cpp`.
+The two main implementations are `matrix_multiplication.py` and `matrix_multiplication.cpp`. The C++ unit tests are in `matrix_multiplication_test.cpp`.
 
-The GPT generated implementations are kept separately. I will discuss them separately according to the assignment requirements.
+The test file contains two test cases and compares the calculated results with manually determined expected results.
+
+The GPT generated implementations are kept separately. I discuss them separately according to the assignment requirements.
 
 ## 9. ChatGPT Implementation
 
@@ -213,8 +241,6 @@ For the C++ version, ChatGPT divided the program into separate functions for rea
 The main difference I noticed is that the ChatGPT implementations are more structured and contain more input validation. My implementations are simpler and more direct. For example, my C++ multiplication is written directly inside the `main()` function, while the ChatGPT version puts the multiplication in a separate `multiply()` function.
 
 Another difference is the loop order in the C++ implementations. My implementation uses the order `i`, `j`, `k`, while the ChatGPT implementation uses `i`, `k`, `j`. Both calculate the same matrix multiplication result, but they organize the operations differently.
-
-### Prompting
 
 ### Prompting
 
@@ -236,7 +262,7 @@ This allowed me to see how the same requirements could be implemented differentl
 
 ### Comparison
 
-Comparing the implementations helped me notice that there are different ways to structure the same solution. My implementation focuses on keeping the code relatively simple and showing the multiplication process directly. The ChatGPT implementation focuses more on separating the program into functions and handling different input cases which is much better than my structure of program.
+Comparing the implementations helped me notice that there are different ways to structure the same solution. My implementation focuses on keeping the code relatively simple and showing the multiplication process directly. The ChatGPT implementation focuses more on separating the program into functions and handling different input cases, which is more modular than my structure.
 
 I think the ChatGPT version is more modular, especially the C++ version, because the multiplication can be called separately from the input and output parts. However, my implementation was easier for me to write and understand while I was learning how the matrix multiplication works.
 
