@@ -20,7 +20,9 @@ rows_of_matrix_A = []
 rows_of_matrix_A = []
 
 for i in range(number_of_rows_matrix_A):
-    input("Enter the rows of the matrix A: ")
+    row_input = int(input("Enter the rows of the matrix A seperated by comma: ").split(","))
+    rows_of_matrix_A.append(row_input)
+    
 
 
     
