@@ -39,13 +39,13 @@ int main () {
     cin >> start_row;
 
     cout << "Enter ending row: ";
-    cin >> start_row;
+    cin >> end_row;
 
     cout << "Enter starting column: ";
-    cin >> start_row;
+    cin >> start_column;
     
     cout << "Enter ending column: ";
-    cin >> start_row;
+    cin >> end_row;
 
     cout << "\nSliced matrix:" << endl;
 
