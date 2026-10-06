@@ -11,3 +11,7 @@ Before doing the experiment, I expect the tuple and list to have different sizes
 ## 3. Experimental Setup
 
 ### 3.1 Python Environment
+
+The experiment was conducted using CPython 3.13.6 on a 64-bit Windows environment. The Python implementation was verified using the `sys` module.
+
+
