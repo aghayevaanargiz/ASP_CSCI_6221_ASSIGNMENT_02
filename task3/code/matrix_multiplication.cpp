@@ -6,7 +6,7 @@ int number_of_rows_matrix_B;
 int number_of_columns_matrix_A;
 int number_of_columns_matrix_B;
 
-# The user defined matrix sizes
+// The user defined matrix sizes
 
 cout << "Enter number of rows for matrix A: ";
 cin >> number_of_rows_matrix_A
