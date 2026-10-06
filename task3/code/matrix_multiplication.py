@@ -43,5 +43,16 @@ for i in range(number_of_rows_matrix_B):
     rows_of_matrix_B.append(row)
 
 
-    
+# Now let's create columns
+
+for i in range(number_of_rows_matrix_A):
+    column_input = input("Enter a column of matrix A separated by comma: ")
+    columnt = column_input.split(",")
+
+    for j in range(len(column)):
+        column[j] = int(column[j])
+
+    rows_of_matrix_A.append(column)
+
+
 
