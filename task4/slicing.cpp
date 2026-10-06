@@ -50,6 +50,11 @@ int main () {
     cout << "\nSliced matrix:" << endl;
 
     for (int i = start_row; i < end_row; i++) {
-       
+        for (int j = start_column; j < end_column; j++) {
+            cout << matrix_A[i][j] << " ";
+        }
+        cout << endl;
     }
+
+    return 0;
 }
