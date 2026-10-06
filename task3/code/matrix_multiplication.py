@@ -15,9 +15,9 @@ if number_of_columns_matrix_A != number_of_rows_matrix_B:
 # Now time to get the matrix values from user, I want to create a list and add the rows there as a sublist (might be stupid idea let's see)
 
 rows_of_matrix_A = []
-rows_of_matrix_A = []
-rows_of_matrix_A = []
-rows_of_matrix_A = []
+rows_of_matrix_B = []
+columns_of_matrix_A = []
+columns_of_matrix_B = []
 
 for i in range(number_of_rows_matrix_A):
     row_input = input("Enter a row of matrix A separated by comma: ")
@@ -25,6 +25,8 @@ for i in range(number_of_rows_matrix_A):
 
     for j in range(len(row)):
         row[j] = int(row[j])
+
+    rows_of_matrix_A.append(row)
     
 
 
